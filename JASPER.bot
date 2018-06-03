@@ -1,0 +1,15 @@
+{
+    "name": "JASPER",
+    "description": "",
+    "secretKey": "",
+    "services": [
+        {
+            "appId": "",
+            "id": "e43a5a00-5e89-11e8-9cdc-7b92a09a70ba",
+            "type": "endpoint",
+            "appPassword": "",
+            "endpoint": "https://localhost:44318/api/messages",
+            "name": "https://localhost:44318/api/messages"
+        }
+    ]
+}

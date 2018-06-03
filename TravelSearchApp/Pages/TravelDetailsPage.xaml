@@ -1,0 +1,63 @@
+﻿<Page x:Class="TravelSearchApp.Pages.TravelDetailsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:toolkitAnimations="using:Microsoft.Toolkit.Uwp.UI.Animations"
+      xmlns:contracts="using:TravelSearchContracts">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+        <StackPanel>
+            <FlipView x:Name="TravelImages"
+                      ItemsSource="{x:Bind TravelData.Images}"
+                      Margin="0,0"
+                      Height="350"
+                      toolkitAnimations:Connected.Key="TravelItemBack">
+                <FlipView.ItemTemplate>
+                    <DataTemplate x:DataType="contracts:TravelImage">
+                        <Grid>
+                            <Image Source="{x:Bind Url}"
+                                   Stretch="UniformToFill" />
+                        </Grid>
+                    </DataTemplate>
+                </FlipView.ItemTemplate>
+            </FlipView>
+
+            <StackPanel Margin="12,12,12,0">
+                <TextBlock Text="{x:Bind TravelData.Title}"
+                           Style="{StaticResource TitleTextBlockStyle}" />
+                <TextBlock Text="{x:Bind TravelData.Desc}"
+                           Style="{StaticResource SubtitleTextBlockStyle}" />
+
+                <TextBlock TextWrapping="WrapWholeWords"
+                           Style="{StaticResource CaptionTextBlockStyle}"
+                           Foreground="#FF424242">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend ex sit amet blandit lobortis. Curabitur ut diam fringilla, interdum massa sit amet, facilisis erat. Donec vulputate sed ex vel pellentesque. In sodales odio non felis interdum viverra. Morbi in mi mollis, ullamcorper nibh sit amet, sagittis ex. Maecenas dapibus commodo venenatis. Donec at egestas est.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend ex sit amet blandit lobortis. Curabitur ut diam fringilla, interdum massa sit amet, facilisis erat. Donec vulputate sed ex vel pellentesque. In sodales odio non felis interdum viverra. Morbi in mi mollis, ullamcorper nibh sit amet, sagittis ex. Maecenas dapibus commodo venenatis. Donec at egestas est.</TextBlock>
+
+                <GridView ItemsSource="{x:Bind TravelData.Activities}"
+                          Margin="0,12,0,0">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"
+                                       Style="{StaticResource CaptionTextBlockStyle}"
+                                       TextAlignment="Center"
+                                       TextWrapping="NoWrap"
+                                       Margin="4"
+                                       Width="120" />
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                    <GridView.ItemContainerStyle>
+                        <Style TargetType="GridViewItem">
+                            <Setter Property="HorizontalContentAlignment"
+                                    Value="Stretch" />
+                            <Setter Property="HorizontalAlignment"
+                                    Value="Stretch" />
+                            <Setter Property="Background"
+                                    Value="AliceBlue" />
+                        </Style>
+                    </GridView.ItemContainerStyle>
+                </GridView>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Page>

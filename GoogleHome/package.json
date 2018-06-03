@@ -1,0 +1,11 @@
+{
+  "name": "jasper-on-google-home",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "bot-framework-actions-on-google": "^2.3.1",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "ngrok": "^2.3.0"
+  }
+}

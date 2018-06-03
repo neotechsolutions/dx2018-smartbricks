@@ -1,0 +1,787 @@
+{
+  "luis_schema_version": "3.0.0",
+  "versionId": "0.1",
+  "name": "Jasper",
+  "desc": "Demo pour l'événement Digital Experience Bordeaux // 2018",
+  "culture": "fr-fr",
+  "intents": [
+    {
+      "name": "Activities"
+    },
+    {
+      "name": "Affirmative"
+    },
+    {
+      "name": "BadHealth"
+    },
+    {
+      "name": "Cancel"
+    },
+    {
+      "name": "Continent"
+    },
+    {
+      "name": "Exit"
+    },
+    {
+      "name": "GoodHealth"
+    },
+    {
+      "name": "Greetings"
+    },
+    {
+      "name": "Negative"
+    },
+    {
+      "name": "NoActivities"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "SelectTravel"
+    },
+    {
+      "name": "Start"
+    },
+    {
+      "name": "Unknown"
+    }
+  ],
+  "entities": [],
+  "composites": [],
+  "closedLists": [
+    {
+      "name": "Activities",
+      "subLists": [
+        {
+          "canonicalForm": "Plage",
+          "list": []
+        },
+        {
+          "canonicalForm": "Piscine",
+          "list": [
+            "Natation"
+          ]
+        },
+        {
+          "canonicalForm": "Tennis",
+          "list": []
+        },
+        {
+          "canonicalForm": "Ping-pong",
+          "list": [
+            "Ping pong",
+            "Ping Pong"
+          ]
+        },
+        {
+          "canonicalForm": "Paddle",
+          "list": []
+        },
+        {
+          "canonicalForm": "Beachvolley",
+          "list": [
+            "Beach Volley",
+            "Beach-Volley"
+          ]
+        },
+        {
+          "canonicalForm": "Aerobic",
+          "list": [
+            "Aérobic"
+          ]
+        },
+        {
+          "canonicalForm": "Aquagym",
+          "list": []
+        },
+        {
+          "canonicalForm": "Voile",
+          "list": [
+            "Pêche"
+          ]
+        },
+        {
+          "canonicalForm": "Pêche",
+          "list": []
+        },
+        {
+          "canonicalForm": "Plongée",
+          "list": [
+            "Plongee"
+          ]
+        },
+        {
+          "canonicalForm": "Windsurf",
+          "list": []
+        },
+        {
+          "canonicalForm": "Pédalos",
+          "list": [
+            "Pedalo",
+            "Pédalo"
+          ]
+        },
+        {
+          "canonicalForm": "Spa",
+          "list": []
+        },
+        {
+          "canonicalForm": "Salle de sport",
+          "list": []
+        },
+        {
+          "canonicalForm": "Golf",
+          "list": []
+        },
+        {
+          "canonicalForm": "Equitation",
+          "list": []
+        },
+        {
+          "canonicalForm": "Ski nautique",
+          "list": []
+        },
+        {
+          "canonicalForm": "Canoé et kayak",
+          "list": [
+            "Canoé kayak",
+            "Canoé-kayak",
+            "Kayak et canoé",
+            "Canoé",
+            "Kayak"
+          ]
+        },
+        {
+          "canonicalForm": "Planche à voile",
+          "list": []
+        },
+        {
+          "canonicalForm": "Bowling",
+          "list": []
+        },
+        {
+          "canonicalForm": "Billard",
+          "list": []
+        },
+        {
+          "canonicalForm": "Catamaran",
+          "list": []
+        },
+        {
+          "canonicalForm": "Kite surf",
+          "list": []
+        }
+      ],
+      "roles": []
+    },
+    {
+      "name": "Continent",
+      "subLists": [
+        {
+          "canonicalForm": "Asie",
+          "list": []
+        },
+        {
+          "canonicalForm": "Europe",
+          "list": []
+        },
+        {
+          "canonicalForm": "Afrique",
+          "list": []
+        },
+        {
+          "canonicalForm": "Océanie",
+          "list": []
+        },
+        {
+          "canonicalForm": "Amérique du nord",
+          "list": []
+        },
+        {
+          "canonicalForm": "Amérique du sud",
+          "list": []
+        }
+      ],
+      "roles": []
+    }
+  ],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [
+    {
+      "name": "number",
+      "roles": []
+    },
+    {
+      "name": "ordinal",
+      "roles": []
+    }
+  ],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "absolument",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "ah oui bonne idée !",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "annule",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "arrêt",
+      "intent": "Exit",
+      "entities": []
+    },
+    {
+      "text": "arrête",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "arrêter",
+      "intent": "Exit",
+      "entities": []
+    },
+    {
+      "text": "asie",
+      "intent": "Continent",
+      "entities": []
+    },
+    {
+      "text": "au top",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "aucune",
+      "intent": "NoActivities",
+      "entities": []
+    },
+    {
+      "text": "aucune idée",
+      "intent": "Unknown",
+      "entities": []
+    },
+    {
+      "text": "avec joie",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "avec plaisir",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "bien",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "bien merci",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "bien sûr",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "bien volontiers",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "billard",
+      "intent": "Activities",
+      "entities": []
+    },
+    {
+      "text": "bonjour",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "bonne idée",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "bonsoir",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "bronzage au soleil",
+      "intent": "NoActivities",
+      "entities": []
+    },
+    {
+      "text": "ça marche",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "ca va",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "ça va",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "ça va bien",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "c'est une bonne idée",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "check",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "coucou",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "de la natation et du tennis",
+      "intent": "Activities",
+      "entities": []
+    },
+    {
+      "text": "de la planche à voile",
+      "intent": "Activities",
+      "entities": []
+    },
+    {
+      "text": "en afrique",
+      "intent": "Continent",
+      "entities": []
+    },
+    {
+      "text": "en asie",
+      "intent": "Continent",
+      "entities": []
+    },
+    {
+      "text": "en pleine forme",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "equitation, golf et billard",
+      "intent": "Activities",
+      "entities": []
+    },
+    {
+      "text": "europe",
+      "intent": "Continent",
+      "entities": []
+    },
+    {
+      "text": "excellent",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "exit",
+      "intent": "Exit",
+      "entities": []
+    },
+    {
+      "text": "farniente",
+      "intent": "NoActivities",
+      "entities": []
+    },
+    {
+      "text": "fatigué",
+      "intent": "BadHealth",
+      "entities": []
+    },
+    {
+      "text": "fin",
+      "intent": "Exit",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "hey",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "j'aime bien le ski nautique",
+      "intent": "Activities",
+      "entities": []
+    },
+    {
+      "text": "jasper",
+      "intent": "Start",
+      "entities": []
+    },
+    {
+      "text": "je choisis la seconde",
+      "intent": "SelectTravel",
+      "entities": []
+    },
+    {
+      "text": "je ne connais pas l'amérique du sud",
+      "intent": "Continent",
+      "entities": []
+    },
+    {
+      "text": "je ne sais pas",
+      "intent": "Unknown",
+      "entities": []
+    },
+    {
+      "text": "je n'en ai aucune idée",
+      "intent": "Unknown",
+      "entities": []
+    },
+    {
+      "text": "je n'en peux plus",
+      "intent": "BadHealth",
+      "entities": []
+    },
+    {
+      "text": "je n'en sais rien",
+      "intent": "Unknown",
+      "entities": []
+    },
+    {
+      "text": "je suis crevé",
+      "intent": "BadHealth",
+      "entities": []
+    },
+    {
+      "text": "je veux bien",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "je voudrais aller en afrique",
+      "intent": "Continent",
+      "entities": []
+    },
+    {
+      "text": "je voudrais bien faire du catamaran",
+      "intent": "Activities",
+      "entities": []
+    },
+    {
+      "text": "je voudrais visiter l'amérique du sud",
+      "intent": "Continent",
+      "entities": []
+    },
+    {
+      "text": "la 1",
+      "intent": "SelectTravel",
+      "entities": []
+    },
+    {
+      "text": "la destination 3 me paraît chouette",
+      "intent": "SelectTravel",
+      "entities": []
+    },
+    {
+      "text": "la forme",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "la troisième destination",
+      "intent": "SelectTravel",
+      "entities": []
+    },
+    {
+      "text": "l'asie c'est chouette",
+      "intent": "Continent",
+      "entities": []
+    },
+    {
+      "text": "le premier",
+      "intent": "SelectTravel",
+      "entities": []
+    },
+    {
+      "text": "natation",
+      "intent": "Activities",
+      "entities": []
+    },
+    {
+      "text": "natation et billard",
+      "intent": "Activities",
+      "entities": []
+    },
+    {
+      "text": "natation et planche à voile",
+      "intent": "Activities",
+      "entities": []
+    },
+    {
+      "text": "natation et ski nautique",
+      "intent": "Activities",
+      "entities": []
+    },
+    {
+      "text": "niet",
+      "intent": "Negative",
+      "entities": []
+    },
+    {
+      "text": "n'importe laquelle",
+      "intent": "Unknown",
+      "entities": []
+    },
+    {
+      "text": "n'importe lequel",
+      "intent": "Unknown",
+      "entities": []
+    },
+    {
+      "text": "non",
+      "intent": "Negative",
+      "entities": []
+    },
+    {
+      "text": "null",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "ok",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "ok google parler à l'assistant jaspair",
+      "intent": "Start",
+      "entities": []
+    },
+    {
+      "text": "oui",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "oui !",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "oui !!",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "oui très bien",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "parler à l'assistant jaspair",
+      "intent": "Start",
+      "entities": []
+    },
+    {
+      "text": "pas bien",
+      "intent": "BadHealth",
+      "entities": []
+    },
+    {
+      "text": "pas de préférence",
+      "intent": "Unknown",
+      "entities": []
+    },
+    {
+      "text": "pas du tout",
+      "intent": "Negative",
+      "entities": []
+    },
+    {
+      "text": "pas envie",
+      "intent": "Negative",
+      "entities": []
+    },
+    {
+      "text": "pas la forme",
+      "intent": "BadHealth",
+      "entities": []
+    },
+    {
+      "text": "pas le moral",
+      "intent": "BadHealth",
+      "entities": []
+    },
+    {
+      "text": "pas sûr",
+      "intent": "Negative",
+      "entities": []
+    },
+    {
+      "text": "pas très bien",
+      "intent": "BadHealth",
+      "entities": []
+    },
+    {
+      "text": "pas trop mal",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "ping",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "plage",
+      "intent": "Activities",
+      "entities": []
+    },
+    {
+      "text": "pourquoi pas",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "quitter",
+      "intent": "Exit",
+      "entities": []
+    },
+    {
+      "text": "repos",
+      "intent": "NoActivities",
+      "entities": []
+    },
+    {
+      "text": "rien",
+      "intent": "Negative",
+      "entities": []
+    },
+    {
+      "text": "salut",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "sieste",
+      "intent": "NoActivities",
+      "entities": []
+    },
+    {
+      "text": "ski nautique",
+      "intent": "Activities",
+      "entities": []
+    },
+    {
+      "text": "ski nautique et bowling",
+      "intent": "Activities",
+      "entities": []
+    },
+    {
+      "text": "stop",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "super",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "super bien",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "terminé",
+      "intent": "Exit",
+      "entities": []
+    },
+    {
+      "text": "test",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "toto",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "tout va bien",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "très bien",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "très bien !",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "très bien et toi ?",
+      "intent": "GoodHealth",
+      "entities": []
+    },
+    {
+      "text": "truc",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "va pour la première",
+      "intent": "SelectTravel",
+      "entities": []
+    },
+    {
+      "text": "va pour l'europe",
+      "intent": "Continent",
+      "entities": []
+    },
+    {
+      "text": "volontiers",
+      "intent": "Affirmative",
+      "entities": []
+    },
+    {
+      "text": "yes",
+      "intent": "Affirmative",
+      "entities": []
+    }
+  ]
+}

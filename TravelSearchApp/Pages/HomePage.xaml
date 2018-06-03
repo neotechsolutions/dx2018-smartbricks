@@ -1,0 +1,105 @@
+﻿<Page x:Class="TravelSearchApp.Pages.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:toolkitAnimations="using:Microsoft.Toolkit.Uwp.UI.Animations"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:contracts="using:TravelSearchContracts"
+      mc:Ignorable="d"
+      NavigationCacheMode="Required"
+      toolkitAnimations:Implicit.ShowAnimations="{StaticResource DefaultShowAnimations}">
+
+    <Page.Resources>
+
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="310"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border>
+            <Image Stretch="UniformToFill"
+                   MinHeight="400"
+                   HorizontalAlignment="Center"
+                   Source="ms-appx:///Assets/voyage.jpg">
+
+            </Image>
+            <toolkitAnimations:Implicit.ShowAnimations>
+                <toolkitAnimations:TranslationAnimation Duration="0:0:0.55"
+                                                        To="0"
+                                                        From="0, -150, 0" />
+            </toolkitAnimations:Implicit.ShowAnimations>
+        </Border>
+
+        <TextBlock Grid.Row="1"
+                   VerticalAlignment="Top"
+                   Style="{ThemeResource SubtitleTextBlockStyle}"
+                   FontWeight="Medium"
+                   Margin="24,12,0,0"
+                   Text="Recommandations" />
+
+        <GridView Grid.Row="1"
+                  x:Name="TravelGrid"
+                  ItemsSource="{x:Bind Travels}"
+                  IsItemClickEnabled="True"
+                  ContainerContentChanging="OnTravelGridContainerContentChanging"
+                  ItemClick="OnListViewItemClick"
+                  ItemContainerStyle="{StaticResource GridViewItemRevealStyle}"
+                  ScrollViewer.HorizontalScrollMode="Auto"
+                  ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                  ScrollViewer.VerticalScrollMode="Disabled"
+                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                  toolkitAnimations:Connected.ListItemKey="TravelItemBack"
+                  toolkitAnimations:Connected.ListItemElementName="TravelImage"
+                  VerticalAlignment="Stretch"
+                  Margin="0,40,0,0">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsStackPanel Margin="14,0,0,0"
+                                     Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="contracts:Travel">
+
+                    <Grid x:Name="GalleryItem"
+                          Margin="10,0"
+                          Width="250">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border Grid.RowSpan="2"
+                                x:Name="Shadow"
+                                BorderBrush="White"
+                                BorderThickness="0" />
+
+                        <Image x:Name="TravelImage"
+                               Stretch="UniformToFill"
+                               Height="190"
+                               Width="250"
+                               Source="{x:Bind MainImage.Url, Mode=OneWay}" />
+
+                        <StackPanel Grid.Row="1"
+                                    Margin="5,0,5,0">
+                            <TextBlock Text="{x:Bind Title}"
+                                       FontWeight="Medium"
+                                       Style="{ThemeResource BodyTextBlockStyle}"
+                                       TextWrapping="NoWrap"
+                                       TextTrimming="CharacterEllipsis" />
+                            <TextBlock Text="{x:Bind Desc}"
+                                       TextTrimming="CharacterEllipsis" />
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <ProgressRing x:Name="LoaderProgressRing"
+                      Grid.Row="1"
+                      Width="48"
+                      Height="48" />
+    </Grid>
+</Page>

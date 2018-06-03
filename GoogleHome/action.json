@@ -1,0 +1,1 @@
+{"locale":"fr","actions":[{"description":"JASPER","name":"MAIN","fulfillment":{"conversationName":"MAIN_CONVERSATION"},"intent":{"name":"actions.intent.MAIN","trigger":{"queryPatterns":["Parler à l'assistant JASPER"]}}}],"conversations":{"MAIN_CONVERSATION":{"name":"MAIN_CONVERSATION","url":"https://955ed513.ngrok.io"}}}
